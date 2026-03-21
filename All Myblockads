@@ -38,6 +38,10 @@ DOMAIN,ossgw.alicdn.com,REJECT,extended-matching
 IP-CIDR,203.107.1.1/24,REJECT,extended-matching,no-resolve
 
 # ======= B ======= #
+
+# 哔哩哔哩
+PROTOCOL, STUN, REJECT
+
 # 百度
 DOMAIN-SUFFIX,pos.baidu.com,REJECT,extended-matching
 DOMAIN,mobads.baidu.com,REJECT,extended-matching
