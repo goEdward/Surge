@@ -61,6 +61,11 @@ DOMAIN,adttrackingprd.hwwt8.com,REJECT,extended-matching
 DOMAIN,1194c00001-0.m.ctrmi.cn,REJECT
 DOMAIN,api.edimob.com,REJECT
 
+# 豆瓣
+# 拦截开屏广告 API (返回 HTTP 200 避免 App 报错)
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ - reject-200
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* - reject-dict
+
 # ======= G ======= #
 # 工商银行
 DOMAIN-SUFFIX,mall.icbc.com.cn,REJECT,extended-matching
