@@ -39,9 +39,6 @@ IP-CIDR,203.107.1.1/24,REJECT,extended-matching,no-resolve
 
 # ======= B ======= #
 
-# 哔哩哔哩
-PROTOCOL, STUN, REJECT
-
 # 百度
 DOMAIN-SUFFIX,pos.baidu.com,REJECT,extended-matching
 DOMAIN,mobads.baidu.com,REJECT,extended-matching
@@ -259,8 +256,6 @@ IN,yandexmetrica.com,REJECT,extended-matching
 
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(?:get-lbs-cell-info\.php|sdkconfig\.php) data-type=text data="{}" status-code=200
 
-# 哔哩哔哩开屏广告 api.bilibili.com
-^https:\/\/(?:api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download) data-type=text data="{}" status-code=200
 
 # 阿里云盘 //*api.alipan.com, member.alipan.com
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data-type=text data="{}" status-code=200
@@ -350,11 +345,6 @@ bhh = type=http-response, pattern=https:\/\/(api|healthy|one|league)\.boohee\.co
 # 高德开屏广告 m5.amap.com
 移除开屏广告 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\?, script-path=https://raw.githubusercontent.com/goEdward/Loon/refs/heads/main/Scripts/amap.js, requires-body=true
 
-# 哔哩哔哩开屏广告 app.bilibili.com
-移除开屏广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show), script-path=https://raw.githubusercontent.com/goEdward/Loon/refs/heads/main/Scripts/bilibili/json.js, requires-body=true
-
-body_rewrite_274 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.bottom.ad_info%22%5D%5D%5D
-
 # 阿里云盘 //*api.alipan.com, member.alipan.com
 aliyun_mine = type=http-response, pattern=^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets), script-path=https://raw.githubusercontent.com/goEdward/Loon/main/Scripts/adrive.js, requires-body=true
 
@@ -372,4 +362,4 @@ jingdong = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.actio
 coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init), script-path=https://raw.githubusercontent.com/goEdward/Loon/main/Scripts/coolapk.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.boohee.com, healthy.boohee.com, one.boohee.com, league.boohee.com, app-api.smzdm.com, m.baidu.com, www.baidu.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, api.pinduoduo.com, api.yangkeduo.com, *.weibo.cn, *.weibo.com, weibo.com, m5.amap.com, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, home.mi.com, wallet.95516.com
+hostname = %APPEND% api.boohee.com, healthy.boohee.com, one.boohee.com, league.boohee.com, app-api.smzdm.com, m.baidu.com, www.baidu.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, api.pinduoduo.com, api.yangkeduo.com, *.weibo.cn, *.weibo.com, weibo.com, m5.amap.com, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, home.mi.com, wallet.95516.com
