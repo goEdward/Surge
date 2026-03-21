@@ -236,11 +236,6 @@ DOMAIN-SUFFIX,ads.umeng.com,REJECT
 DOMAIN-SUFFIX,aishuttler.com,REJECT
 DOMAIN-SUFFIX,wkanx.com,REJECT
 
-# 微信
-DOMAIN-SUFFIX,wxs.qq.com,REJECT
-DOMAIN,badjs.weixinbridge.com,REJECT
-DOMAIN,dns.weixin.qq.com.cn,REJECT
-
 # ======= X ======= #
 # 小米
 DOMAIN,sdkconfig.ad.xiaomi.com,REJECT,extended-matching
