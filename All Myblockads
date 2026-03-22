@@ -284,7 +284,7 @@ IN,yandexmetrica.com,REJECT,extended-matching
 ^https:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?|rest\/) data-type=text data="{}" status-code=200
 
 # 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
-^https:\/\/api\.douban\.com\/v2\/app_ads data-type=text data="{}" status-code=200
+^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ data-type=text data="{}" status-code=200
 # ^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ data-type=text data="{}" status-code=200
 
 # ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ data-type=text data="{}" status-code=200
