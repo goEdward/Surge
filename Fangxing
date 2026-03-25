@@ -1,0 +1,12 @@
+#!name=放行规则
+#!desc=放行规则
+#!author=Edward
+#!icon=https://github.com/goEdward/Loon/blob/main/Icons/app/myblockads.png?raw=true
+#!category=去广告
+#!tag=去广告
+
+[Rule]
+# 微信dns
+OR,((DOMAIN,aedns.weixin.qq.com,extended-matching), (DOMAIN,dns.weixin.qq.com.cn,extended-matching), (DOMAIN,short.weixin.qq.com,extended-matching), (DOMAIN,long.weixin.qq.com,extended-matching)),DIRECT 
+# 广告联盟放行
+OR,((DOMAIN-KEYWORD,api-access.pangolin-sdk-toutiao-b.com,extended-matching), (DOMAIN-KEYWORD,pangolin-sdk-toutiao-b.com,extended-matching), (DOMAIN,probe.icloud.com,extended-matching), (DOMAIN-SUFFIX,oth.eve.mdt.qq.com,extended-matching), (DOMAIN,h.trace.qq.com,extended-matching), (DOMAIN,btrace.qq.com,extended-matching)),DIRECT
