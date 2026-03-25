@@ -217,6 +217,15 @@ DOMAIN,tpns.qq.com,REJECT,extended-matching
 DOMAIN,wup.imtt.qq.com,REJECT
 IP-CIDR,47.110.187.87/32,REJECT,extended-matching,no-resolve
 
+# 新浪财经 *.sina.com.cn, *.sina.cn
+DOMAIN,sax.sina.com.cn,REJECT
+DOMAIN,sax.sina.com.hk,REJECT
+DOMAIN,sdkapp.mobile.sina.cn,REJECT
+DOMAIN,ad.sina.com.cn,REJECT
+DOMAIN,beacon.sina.com.cn,REJECT
+# DOMAIN,logs.sina.cn,REJECT
+# DOMAIN,alog.sina.com.cn,REJECT
+
 # ======= W ======= #
 # 万能钥匙
 DOMAIN-SUFFIX,ads.umeng.com,REJECT
