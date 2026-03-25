@@ -19,7 +19,7 @@ DOMAIN-KEYWORD,paypal,DIRECT
 ^https:\/\/g1\.tagtic\.cn data-type=text data="{}" status-code=200
 # 懂球帝 ap.dongqiudi.com,ap.dongdianqiu.com
 ^https?:\/\/ap\.dongqiudi\.com\/plat\/v data-type=text data="{}" status-code=200
-^https?:\/\/ap\.dongdianqiu\.com\/plat\/v3 data-type=text data="{}" status-code=200
+^https?:\/\/ap\.dongdianqiu\.com\/plat data-type=text data="{}" status-code=200
 
 # 招商银行 webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data-type=text data="{}" status-code=200
