@@ -1,0 +1,29 @@
+#!name=EdwarADs
+#!desc=自用去广告插件
+#!author=RuCu6[https://github.com/RuCu6]
+#!icon=https://github.com/goEdward/Loon/blob/main/Icons/app/myblockads.png?raw=true
+#!category=去广告
+#!tag=去广告
+
+[Rule]
+DOMAIN-SUFFIX,edward666.xyz,DIRECT
+DOMAIN,api.immtel.co,DIRECT
+DOMAIN-KEYWORD,paypal,DIRECT
+
+[Map Local]
+# 小佩宠物 api.petkit.cn
+^https?:\/\/api\.petkit\.cn\/6\/\/device\/relatedProductsInfo data-type=text data="{}" status-code=200
+# 二柄 erbingeditor.diershoubing.com
+^https:\/\/erbingeditor\.diershoubing\.com\/4\/ data-type=text data="{}" status-code=200
+# NGA g1.tagtic.cn
+^https:\/\/g1\.tagtic\.cn data-type=text data="{}" status-code=200
+# 懂球帝 ap.dongqiudi.com
+^https?:\/\/ap\.dongqiudi\.com\/plat\/v data-type=text data="{}" status-code=200
+# 招商银行 webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data-type=text data="{}" status-code=200
+^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data-type=text data="{}" status-code=200
+
+[Script]
+
+[MITM]
+hostname = %APPEND% ap.dongqiudi.com,webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com,g1.tagtic.cn,erbingeditor.diershoubing.com,api.petkit.cn
