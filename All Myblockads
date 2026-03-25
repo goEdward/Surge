@@ -1,8 +1,9 @@
 #!name=All Myblockads
-#!desc=自用去广告插件, 以下app请使用单独插件: 高德地图, 哔哩哔哩, 网易云音乐, 微博, YouTube, 知乎。
+#!desc=自用去广告插件
 #!author=RuCu6[https://github.com/RuCu6]
 #!icon=https://github.com/goEdward/Loon/blob/main/Icons/app/myblockads.png?raw=true
-#!date=2024-10-15 10:05
+#!category=去广告
+#!tag=去广告
 
 [Rule]
 # ======= 0 ======= #
@@ -361,3 +362,4 @@ coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/(?:feed\
 
 [MITM]
 hostname = %APPEND% api.boohee.com, healthy.boohee.com, one.boohee.com, league.boohee.com, app-api.smzdm.com, m.baidu.com, www.baidu.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, api.pinduoduo.com, api.yangkeduo.com, *.weibo.cn, *.weibo.com, weibo.com, m5.amap.com, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, home.mi.com, wallet.95516.com
+
