@@ -10,6 +10,15 @@ DOMAIN-SUFFIX,edward666.xyz,DIRECT
 DOMAIN,api.immtel.co,DIRECT
 DOMAIN-KEYWORD,paypal,DIRECT
 
+# 新浪财经 *.sina.com.cn, *.sina.cn
+DOMAIN,sax.sina.com.cn,REJECT
+DOMAIN,sax.sina.com.hk,REJECT
+DOMAIN,sdkapp.mobile.sina.cn,REJECT
+DOMAIN,ad.sina.com.cn,REJECT
+DOMAIN,beacon.sina.com.cn,REJECT
+# DOMAIN,logs.sina.cn,REJECT
+# DOMAIN,alog.sina.com.cn,REJECT
+
 [Map Local]
 # 小佩宠物 api.petkit.cn
 ^https?:\/\/api\.petkit\.cn\/6\/\/device\/relatedProductsInfo data-type=text data="{}" status-code=200
