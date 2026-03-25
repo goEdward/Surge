@@ -3,7 +3,7 @@
 #!author=RuCu6[https://github.com/RuCu6]
 #!icon=https://github.com/goEdward/Loon/blob/main/Icons/app/myblockads.png?raw=true
 #!category=去广告
-#!tag=去广告
+#!tag=去广告1
 
 [Rule]
 DOMAIN-SUFFIX,edward666.xyz,DIRECT
