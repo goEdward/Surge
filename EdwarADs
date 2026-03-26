@@ -34,7 +34,11 @@ DOMAIN,beacon.sina.com.cn,REJECT
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data-type=text data="{}" status-code=200
 ^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data-type=text data="{}" status-code=200
 
+# 金十数据 jad-api.jin10.com
+^https?:\/\/jad-api\.jin10\.com\/ad data-type=text data="{}" status-code=200
+
+
 [Script]
 
 [MITM]
-hostname = %APPEND% ap.dongqiudi.com,ap.dongdianqiu.com,webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com,g1.tagtic.cn,erbingeditor.diershoubing.com,api.petkit.cn
+hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com,webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com,g1.tagtic.cn,erbingeditor.diershoubing.com,api.petkit.cn
