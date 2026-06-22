@@ -1,0 +1,24 @@
+#!name=MYbADS-Mini-sg
+#!desc=自用去广告插件
+#!author=RuCu6[https://github.com/RuCu6]
+#!icon=https://github.com/goEdward/Loon/blob/main/Icons/app/myblockads.png?raw=true
+#!category=去广告
+#!tag=去广告1
+
+[Rule]
+DOMAIN-SUFFIX,edward666.xyz,DIRECT
+DOMAIN-KEYWORD,paypal,DIRECT
+
+[Map Local]
+# 懂球帝 ap.dongqiudi.com,ap.dongdianqiu.com
+^https?:\/\/ap\.dongqiudi\.com\/plat\/v data-type=text data="{}" status-code=200
+^https?:\/\/ap\.dongdianqiu\.com\/plat data-type=text data="{}" status-code=200
+
+# 金十数据 jad-api.jin10.com
+^https?:\/\/jad-api\.jin10\.com\/ad data-type=text data="{}" status-code=200
+
+
+[Script]
+
+[MITM]
+hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com
