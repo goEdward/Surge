@@ -30,9 +30,14 @@ URL-REGEX,"^http:\/\/api\.weibo\.cn\/httpdns\/config",REJECT,extended-matching
 ^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime data-type=text data="{}" status-code=200
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(?:get-lbs-cell-info\.php|sdkconfig\.php) data-type=text data="{}" status-code=200
 
-
 # 酷安 //api.coolapk.com
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=text data="{}" status-code=200
+
+[URL Rewrite]
+# > 中国移动 去开屏
+URL-REGEX,^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit,REJECT
+URL-REGEX,^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList,REJECT
+URL-REGEX,^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket,REJECT
 
 [Script]
 # 酷安 //api.coolapk.com
