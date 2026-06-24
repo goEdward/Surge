@@ -34,7 +34,7 @@ URL-REGEX,"^http:\/\/api\.weibo\.cn\/httpdns\/config",REJECT,extended-matching
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=text data="{}" status-code=200
 
 [URL Rewrite]
-# > 中国移动 去开屏
+# > 中国移动 去开屏，client.app.coc.10086.cn,h.app.coc.10086.cn,app.10086.cn
 URL-REGEX,^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit,REJECT
 URL-REGEX,^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList,REJECT
 URL-REGEX,^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket,REJECT
@@ -44,4 +44,4 @@ URL-REGEX,^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/
 coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init), script-path=https://raw.githubusercontent.com/goEdward/Loon/main/Scripts/coolapk.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com,api.coolapk.com,*.uve.weibo.com
+hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com,api.coolapk.com,*.uve.weibo.com,client.app.coc.10086.cn,h.app.coc.10086.cn,app.10086.cn
