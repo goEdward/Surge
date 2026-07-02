@@ -19,6 +19,15 @@ DOMAIN,beacon.sina.com.cn,REJECT
 # DOMAIN,logs.sina.cn,REJECT
 # DOMAIN,alog.sina.com.cn,REJECT
 
+# 微博开屏广告
+DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching
+# 微博拦截HTTPDNS
+DOMAIN,dns.weibo.cn,REJECT,extended-matching
+IP-CIDR,39.97.130.51/32,REJECT,no-resolve
+IP-CIDR,39.97.128.148/32,REJECT,no-resolve
+URL-REGEX,"^http:\/\/api\.weibo\.cn\/2\/httpdns\/config",REJECT,extended-matching
+URL-REGEX,"^http:\/\/api\.weibo\.cn\/httpdns\/config",REJECT,extended-matching
+
 [Map Local]
 # 小佩宠物 api.petkit.cn
 ^https?:\/\/api\.petkit\.cn\/6\/\/device\/relatedProductsInfo data-type=text data="{}" status-code=200
@@ -31,14 +40,19 @@ DOMAIN,beacon.sina.com.cn,REJECT
 ^https?:\/\/ap\.dongdianqiu\.com\/plat data-type=text data="{}" status-code=200
 
 # 招商银行 webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com
-^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data-type=text data="{}" status-code=200
-^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data-type=text data="{}" status-code=200
+# ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data-type=text data="{}" status-code=200
+# ^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data-type=text data="{}" status-code=200
 
 # 金十数据 jad-api.jin10.com
 ^https?:\/\/jad-api\.jin10\.com\/ad data-type=text data="{}" status-code=200
+
+# 微博开屏广告 //*.uve.weibo.com
+^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime data-type=text data="{}" status-code=200
+
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(?:get-lbs-cell-info\.php|sdkconfig\.php) data-type=text data="{}" status-code=200
 
 
 [Script]
 
 [MITM]
-hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com,webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com,g1.tagtic.cn,erbingeditor.diershoubing.com,api.petkit.cn
+hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com,webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com,g1.tagtic.cn,erbingeditor.diershoubing.com,api.petkit.cn,*.uve.weibo.com
