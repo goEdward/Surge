@@ -13,11 +13,15 @@ DOMAIN-KEYWORD,paypal,DIRECT
 # 新浪财经 *.sina.com.cn, *.sina.cn
 DOMAIN,sax.sina.com.cn,REJECT
 DOMAIN,sax.sina.com.hk,REJECT
-DOMAIN,sdkapp.mobile.sina.cn,REJECT
-DOMAIN,ad.sina.com.cn,REJECT
-DOMAIN,beacon.sina.com.cn,REJECT
-# DOMAIN,logs.sina.cn,REJECT
-# DOMAIN,alog.sina.com.cn,REJECT
+DOMAIN-SUFFIX,ad.sina.com.cn,REJECT
+DOMAIN-SUFFIX,ad4.sina.com.cn,REJECT
+DOMAIN-SUFFIX,adbox.sina.com.cn,REJECT
+DOMAIN-SUFFIX,dcads.sina.com.cn,REJECT
+DOMAIN-SUFFIX,saxn.sina.com.cn,REJECT
+DOMAIN-SUFFIX,saxs.sina.com.cn,REJECT
+DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,REJECT
+DOMAIN-SUFFIX,sdkclick.mobile.sina.cn,REJECT
+DOMAIN-SUFFIX,adimg.mobile.sina.cn,REJECT
 
 # 微博开屏广告
 DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching
@@ -51,8 +55,11 @@ URL-REGEX,"^http:\/\/api\.weibo\.cn\/httpdns\/config",REJECT,extended-matching
 
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(?:get-lbs-cell-info\.php|sdkconfig\.php) data-type=text data="{}" status-code=200
 
+[URL Rewrite]
+# 新浪财经 ad.cj.sina.cn
+^https?:\/\/ad\.cj\.sina\.cn\/(osa\/adpreload|fax\/impress) - reject
 
 [Script]
 
 [MITM]
-hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com,webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com,g1.tagtic.cn,erbingeditor.diershoubing.com,api.petkit.cn,*.uve.weibo.com
+hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com,webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com,g1.tagtic.cn,erbingeditor.diershoubing.com,api.petkit.cn,*.uve.weibo.com,ad.cj.sina.cn
