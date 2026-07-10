@@ -33,6 +33,10 @@ URL-REGEX,"^http:\/\/api\.weibo\.cn\/2\/httpdns\/config",REJECT,extended-matchin
 URL-REGEX,"^http:\/\/api\.weibo\.cn\/httpdns\/config",REJECT,extended-matching
 
 [Map Local]
+# 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
+^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ data-type=text data="{}" status-code=200
+^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ data-type=text data="{}" status-code=200
+
 # 小佩宠物 api.petkit.cn
 ^https?:\/\/api\.petkit\.cn\/6\/\/device\/relatedProductsInfo data-type=text data="{}" status-code=200
 # 二柄 erbingeditor.diershoubing.com
@@ -62,4 +66,4 @@ URL-REGEX,"^http:\/\/api\.weibo\.cn\/httpdns\/config",REJECT,extended-matching
 [Script]
 
 [MITM]
-hostname = %APPEND% jad-api.jin10.com,ap.dongqiudi.com,ap.dongdianqiu.com,webappcfg.paas.cmbchina.com,az1mbasecc.bas.cmbchina.com,g1.tagtic.cn,erbingeditor.diershoubing.com,api.petkit.cn,*.uve.weibo.com,ad.cj.sina.cn
+hostname = %APPEND% jad-api.jin10.com, ap.dongqiudi.com, ap.dongdianqiu.com, webappcfg.paas.cmbchina.com, az1mbasecc.bas.cmbchina.com, g1.tagtic.cn, erbingeditor.diershoubing.com,api.petkit.cn, *.uve.weibo.com, ad.cj.sina.cn, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
